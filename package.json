@@ -1,0 +1,31 @@
+{
+  "name": "playwright-azure-blue-tests",
+  "version": "1.0.0",
+  "description": "Playwright test automation for Azure Blue employer portal",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:debug": "npx playwright test --debug",
+    "test:ui": "npx playwright test --ui",
+    "test:login": "npx playwright test tests/login --headed",
+    "test:dashboard": "npx playwright test tests/dashboard --headed",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:firefox": "npx playwright test --project=firefox",
+    "test:webkit": "npx playwright test --project=webkit",
+    "test:mobile": "npx playwright test --project=\"Mobile Chrome\" --project=\"Mobile Safari\"",
+    "test:ci": "npx playwright test --reporter=junit",
+    "report": "npx playwright show-report",
+    "install:browsers": "npx playwright install",
+    "install:deps": "npx playwright install-deps"
+  },
+  "keywords": ["playwright", "automation", "testing", "azure", "e2e"],
+  "author": "QA Team",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.40.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "testAccounts": {
+    "validUser": {
+      "username": "pppols",
+      "password": "Password1",
+      "accountId": "333536",
+      "displayName": "Patio"
+    },
+    "adminUser": {
+      "username": "admin_test",
+      "password": "AdminPass123",
+      "accountId": "999999",
+      "displayName": "Admin User"
+    },
+    "invalidUser": {
+      "username": "invalid@test.com",
+      "password": "wrongpassword",
+      "accountId": null,
+      "displayName": null
+    }
+  },
+  
+  "testEmployees": [
+    {
+      "id": "EMP001",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john.doe@example.com",
+      "employeeId": "12345",
+      "department": "Engineering",
+      "status": "Active"
+    },
+    {
+      "id": "EMP002", 
+      "firstName": "Jane",
+      "lastName": "Smith",
+      "email": "jane.smith@example.com",
+      "employeeId": "12346",
+      "department": "HR",
+      "status": "Active"
+    },
+    {
+      "id": "EMP003",
+      "firstName": "Bob",
+      "lastName": "Johnson",
+      "email": "bob.johnson@example.com",
+      "employeeId": "12347",
+      "department": "Finance",
+      "status": "Terminated"
+    }
+  ],
+  
+  "testBillData": {
+    "currentBill": {
+      "amount": 2450.50,
+      "dueDate": "2025-08-15",
+      "billNumber": "INV-2025-001",
+      "status": "Pending"
+    },
+    "previousBills": [
+      {
+        "amount": 2398.75,
+        "dueDate": "2025-07-15",
+        "billNumber": "INV-2025-002",
+        "status": "Paid"
+      }
+    ]
+  },
+  
+  "navigationData": {
+    "mainMenuItems": [
+      "Employee Search",
+      "Pay Bill",
+      "Order ID Card",
+      "Add a New Employee"
+    ],
+    "expectedUrls": {
+      "dashboard": "/home",
+      "employeeSearch": "/employee/search",
+      "payBill": "/billing/pay",
+      "orderIdCard": "/cards/order",
+      "addEmployee": "/employee/add"
+    }
+  }
+}
