@@ -5,6 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
+    "test:fast": "npx playwright test --workers=4",
+    "test:max": "npx playwright test --workers=100%",
+    "test:single": "npx playwright test --workers=1",
     "test:headed": "npx playwright test --headed",
     "test:debug": "npx playwright test --debug",
     "test:ui": "npx playwright test --ui",

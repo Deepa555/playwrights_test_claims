@@ -3,14 +3,21 @@ const config = require('./config/env.config');
 
 export default defineConfig({
   testDir: './tests',
+  
   /* Run tests in files in parallel */
   fullyParallel: true,
+  
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
+  
   /* Retry on CI only */
   retries: process.env.CI ? config.retries : 1,
-  /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? config.workers : undefined,
+  
+  /* Configure workers for parallel execution */
+  workers: process.env.CI ? config.workers : '75%', // Use 75% of CPU cores locally
+  
+  /* Maximum time one test can run for */
+  timeout: 30 * 1000, // 30 seconds per test
   
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
