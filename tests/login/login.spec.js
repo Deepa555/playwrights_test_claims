@@ -55,6 +55,9 @@ test.describe('Azure Blue Login Tests', () => {
     
     const result = await loginHelper.performLogin();
     
+    // Additional wait to ensure page is fully loaded
+    await page.waitForTimeout(2000);
+    
     expect(result.success).toBeTruthy();
     await loginHelper.verifyLoginSuccess();
     
